@@ -1,0 +1,22 @@
+---
+description: Code Review
+alwaysApply: false
+---
+
+When reviewing code:
+
+Check
+
+- architecture consistency
+- naming
+- duplicated logic
+- null handling
+- async correctness
+- exception handling
+- performance
+- security
+- coding conventions
+
+Prefer minimal changes.
+
+Do not request stylistic changes unless they improve maintainability.

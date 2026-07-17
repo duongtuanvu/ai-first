@@ -7,7 +7,7 @@ Before implementing frontend code:
 
 1. Read AGENTS.md.
 2. Read docs/architecture.md.
-3. Read docs/frontend-conventions.md.
+3. Read docs/frontend.md.
 4. Read docs/coding-style.md.
 
 Inspect an existing page or component.

@@ -10,8 +10,8 @@ This file is the entry point for any AI agent working in this repository.
 
 1. Read the relevant documentation
 
-- Backend tasks: [docs/architecture.md](docs/architecture.md), [docs/backend-conventions.md](docs/backend-conventions.md), [docs/coding-style.md](docs/coding-style.md)
-- Frontend tasks: [docs/architecture.md](docs/architecture.md), [docs/frontend-conventions.md](docs/frontend-conventions.md), [docs/coding-style.md](docs/coding-style.md)
+- Backend tasks: [docs/architecture.md](docs/architecture.md), [docs/backend.md](docs/backend.md), [docs/coding-style.md](docs/coding-style.md)
+- Frontend tasks: [docs/architecture.md](docs/architecture.md), [docs/frontend.md](docs/frontend.md), [docs/coding-style.md](docs/coding-style.md)
 
 2. Inspect at least one existing feature that is similar to the requested task — look for a complete feature implementation in the codebase to use as a pattern.
 

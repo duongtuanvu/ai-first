@@ -45,4 +45,4 @@ Readable, consistent coding practices for backend and frontend code in this repo
 
 ---
 
-Follow repository-specific rules in `backend-conventions.md` and `frontend-conventions.md` for more detail.
+Follow repository-specific rules in `backend.md` and `frontend.md` for more detail.

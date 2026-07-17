@@ -1,79 +1,74 @@
 # Frontend Conventions
 
-## Technology
+## Purpose
 
-React
+Frontend coding conventions for React + TypeScript in this repository.
 
-TypeScript
+## Technology stack
 
-Vite
+- React + TypeScript
+- Vite for bundling/dev
+- React Query for server state
+- React Hook Form for forms
 
-## Folder Structure
+## Folder structure
 
-pages/
+- `pages/` — top-level routes/pages
+- `components/` — presentational and composite components
+- `hooks/` — reusable hooks with business logic
+- `services/` — API interaction layer (fetch/axios wrappers)
+- `types/` — shared TypeScript types
+- `utils/` — small helpers
 
-components/
-
-hooks/
-
-services/
-
-types/
-
-utils/
+Group by feature when the app grows (e.g., `features/products/`).
 
 ## Naming
 
-Component
+- Components: `ProductTable.tsx`
+- Hooks: `useProducts.ts`
+- Services: `productService.ts`
+- Types: `Product.ts`
 
-ProductTable.tsx
+Use PascalCase for components and types, camelCase for functions and hooks.
 
-Hook
+## Components & Hooks
 
-useProducts.ts
+- Keep components small and presentational; move logic to hooks.
+- Prefer composition over prop drilling; use context when needed.
+- Extract reusable UI components into `components/ui/`.
 
-Service
+## API & Data fetching
 
-productService.ts
+- Do not call `fetch` directly in components. Use `services` and `react-query` hooks.
+- Centralize API base URL and error handling in the service layer.
 
-Type
+Example service method:
 
-Product.ts
+```
+export async function getProducts(params) {
+	return apiClient.get('/api/v1/products', { params });
+}
+```
 
-## Components
+## State management
 
-Components should be small.
+- Use React Query for server state and caching.
+- Use local component state for UI-only state.
 
-Extract reusable UI.
+## Forms & Validation
 
-Avoid duplicated JSX.
-
-## Hooks
-
-Business logic belongs in hooks.
-
-Components should remain presentational when possible.
-
-## API
-
-Never call fetch directly inside components.
-
-Always use service layer.
-
-## State
-
-Prefer React Query for server state.
-
-Use local state only for UI.
-
-## Forms
-
-Use React Hook Form.
-
-Validation via Zod or Yup.
+- Use React Hook Form for forms, validate with Zod or Yup.
 
 ## Styling
 
-Prefer Tailwind.
+- Prefer Tailwind CSS for utility-first styling.
+- Avoid inline styles; extract style logic where necessary.
 
-Avoid inline styles unless necessary.
+## Testing
+
+- Use React Testing Library + Jest for unit/component tests.
+- Write small, focused tests for hooks and components.
+
+---
+
+Follow these conventions for consistent, maintainable frontend code.
